@@ -5,11 +5,11 @@ namespace Assets.Scripts
     public class BasePlayer : IBasePlayer
     {
         private static BasePlayer _Instance;
-        private IBaseClass baseClass;
-        private ISubclass secondaryClass;
-        private ISubclass tertiaryClass;
+        public IBaseClass BaseClass { get; set; }
+        public ISubclass SecondaryClass { get; set; }
+        public ISubclass TertiaryClass { get; set; }
 
-        public BasePlayer()
+        private BasePlayer()
         {
         }
 
@@ -20,47 +20,47 @@ namespace Assets.Scripts
 
         public void BaseAbilityOne()
         {
-            baseClass.AbilityOne();
+            BaseClass.AbilityOne();
         }
 
         public void BaseAbilityTwo()
         {
-            baseClass.AbilityTwo();
+            BaseClass.AbilityTwo();
         }
 
         public void BaseAbilityThree()
         {
-            baseClass.AbilityThree();
+            BaseClass.AbilityThree();
         }
         
         public void SecondaryAbilityOne()
         {
-            secondaryClass.AbilityOne();
+            SecondaryClass.AbilityOne();
         }
         
         public void SecondaryAbilityTwo()
         {
-            secondaryClass.AbilityTwo();
+            SecondaryClass.AbilityTwo();
         }
 
         public void SecondaryAbilityThree()
         {
-            secondaryClass.AbilityThree();
+            SecondaryClass.AbilityThree();
         }
 
         public void TertiaryAbilityOne()
         {
-            tertiaryClass.AbilityOne();
+            TertiaryClass.AbilityOne();
         }
 
         public void TertiaryAbilityTwo()
         {
-            tertiaryClass.AbilityTwo();
+            TertiaryClass.AbilityTwo();
         }
 
         public void TertiaryAbilityThree()
         {
-            tertiaryClass.AbilityThree();
+            TertiaryClass.AbilityThree();
         }
     }
 }

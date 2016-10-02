@@ -1,6 +1,6 @@
 ﻿namespace Assets.Scripts
 {
-    interface IBasePlayer
+    public interface IBasePlayer
     {
         void BaseAbilityOne();
         void BaseAbilityTwo();
