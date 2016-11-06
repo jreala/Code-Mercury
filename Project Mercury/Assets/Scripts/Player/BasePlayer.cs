@@ -1,13 +1,14 @@
-﻿using System;
+﻿using Assets.Scripts.Classes.BaseClasses;
+using Assets.Scripts.Classes.SubClasses;
 
-namespace Assets.Scripts
+namespace Assets.Scripts.Player
 {
     public class BasePlayer : IBasePlayer
     {
-        private static BasePlayer _Instance;
-        public IBaseClass BaseClass { get; set; }
-        public ISubclass SecondaryClass { get; set; }
-        public ISubclass TertiaryClass { get; set; }
+        private static BasePlayer _instance;
+        public IBaseClass BaseClass { get; private set; }
+        public ISubclass SecondaryClass { get; private set; }
+        public ISubclass TertiaryClass { get; private set; }
 
         private BasePlayer()
         {
@@ -15,7 +16,22 @@ namespace Assets.Scripts
 
         public static BasePlayer GetInstance()
         {
-            return _Instance != null ? _Instance : new BasePlayer();
+            return _instance != null ? _instance : new BasePlayer();
+        }
+
+        public void SetBaseClass(IBaseClass baseClass)
+        {
+            BaseClass = baseClass;
+        }
+
+        public void SetSecondaryClass(ISubclass secondaryClass)
+        {
+            SecondaryClass = secondaryClass;
+        }
+
+        public void SetTertiaryClass(ISubclass tertiaryClass)
+        {
+            TertiaryClass = tertiaryClass;
         }
 
         public void BaseAbilityOne()
