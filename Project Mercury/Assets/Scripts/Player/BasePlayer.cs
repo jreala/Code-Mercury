@@ -13,7 +13,7 @@ namespace Assets.Scripts.Player
         private BasePlayer()
         {
         }
-
+         
         public static BasePlayer GetInstance()
         {
             return _instance != null ? _instance : new BasePlayer();
@@ -36,17 +36,17 @@ namespace Assets.Scripts.Player
 
         public void BaseAbilityOne()
         {
-            BaseClass.AbilityOne();
+            BaseClass.UseAbilityOne();
         }
 
         public void BaseAbilityTwo()
         {
-            BaseClass.AbilityTwo();
+            BaseClass.UseAbilityTwo();
         }
 
         public void BaseAbilityThree()
         {
-            BaseClass.AbilityThree();
+            BaseClass.UseAbilityThree();
         }
         
         public void SecondaryAbilityOne()

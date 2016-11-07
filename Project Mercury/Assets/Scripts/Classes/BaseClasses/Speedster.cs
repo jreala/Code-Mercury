@@ -1,19 +1,19 @@
 ﻿using Assets.Scripts.Player;
-using Assets.Scripts.Abilities.Brawler;
+using Assets.Scripts.Abilities.Speedster;
 
 namespace Assets.Scripts.Classes.BaseClasses
 {
-    public class Brawler : IBaseClass
+    public class Speedster : IBaseClass
     {
         private const int _health = 200;
         private const int _energy = 100;
         private const int _attack = 125;
-        private const int _defense = 125;
-        private const int _speed = 100;
+        private const int _defense = 75;
+        private const int _speed = 200;
         
-        public BrawlerAbilityList AbilityOne { get; set; }
-        public BrawlerAbilityList AbilityTwo { get; set; }
-        public BrawlerAbilityList AbilityThree { get; set; }
+        public SpeedsterAbilityList AbilityOne { get; set; }
+        public SpeedsterAbilityList AbilityTwo { get; set; }
+        public SpeedsterAbilityList AbilityThree { get; set; }
 
         public Attributes GetAttributes()
         {
@@ -29,22 +29,22 @@ namespace Assets.Scripts.Classes.BaseClasses
 
         public ClassName GetClassName()
         {
-            return ClassName.Brawler;
+            return ClassName.Speedster;
         }
 
         public void UseAbilityOne()
         {
-            BrawlerAbilityFactory.ActivateAbility(AbilityOne);
+            SpeedsterAbilityFactory.ActivateAbility(AbilityOne);
         }
 
         public void UseAbilityTwo()
         {
-            BrawlerAbilityFactory.ActivateAbility(AbilityTwo);
+            SpeedsterAbilityFactory.ActivateAbility(AbilityTwo);
         }
 
         public void UseAbilityThree()
         {
-            BrawlerAbilityFactory.ActivateAbility(AbilityThree);
+            SpeedsterAbilityFactory.ActivateAbility(AbilityThree);
         }
     }
 }

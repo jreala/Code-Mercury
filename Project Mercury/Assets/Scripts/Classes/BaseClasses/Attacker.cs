@@ -1,19 +1,19 @@
 ﻿using Assets.Scripts.Player;
-using Assets.Scripts.Abilities.Brawler;
+using Assets.Scripts.Abilities.Attacker;
 
 namespace Assets.Scripts.Classes.BaseClasses
 {
-    public class Brawler : IBaseClass
+    public class Attacker : IBaseClass
     {
-        private const int _health = 200;
+        private const int _health = 100;
         private const int _energy = 100;
-        private const int _attack = 125;
-        private const int _defense = 125;
-        private const int _speed = 100;
-        
-        public BrawlerAbilityList AbilityOne { get; set; }
-        public BrawlerAbilityList AbilityTwo { get; set; }
-        public BrawlerAbilityList AbilityThree { get; set; }
+        private const int _attack = 200;
+        private const int _defense = 100;
+        private const int _speed = 150;
+
+        public AttackerAbilityList AbilityOne { get; set; }
+        public AttackerAbilityList AbilityTwo { get; set; }
+        public AttackerAbilityList AbilityThree { get; set; }
 
         public Attributes GetAttributes()
         {
@@ -29,22 +29,22 @@ namespace Assets.Scripts.Classes.BaseClasses
 
         public ClassName GetClassName()
         {
-            return ClassName.Brawler;
+            return ClassName.Attacker;
         }
 
         public void UseAbilityOne()
         {
-            BrawlerAbilityFactory.ActivateAbility(AbilityOne);
+            AttackerAbilityFactory.ActivateAbility(AbilityOne);
         }
 
         public void UseAbilityTwo()
         {
-            BrawlerAbilityFactory.ActivateAbility(AbilityTwo);
+            AttackerAbilityFactory.ActivateAbility(AbilityTwo);
         }
 
         public void UseAbilityThree()
         {
-            BrawlerAbilityFactory.ActivateAbility(AbilityThree);
+            AttackerAbilityFactory.ActivateAbility(AbilityThree);
         }
     }
 }
