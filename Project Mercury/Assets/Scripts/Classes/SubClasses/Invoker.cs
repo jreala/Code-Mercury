@@ -1,5 +1,5 @@
 ﻿using Assets.Scripts.Player;
-using UnityEngine;
+using Assets.Scripts.Abilities.Invoker;
 
 namespace Assets.Scripts.Classes.SubClasses
 {
@@ -11,20 +11,9 @@ namespace Assets.Scripts.Classes.SubClasses
         private const int _defense = 0;
         private const int _speed = 25;
 
-        void ISubclass.AbilityOne()
-        {
-            Debug.Log("INVOKER Ability One Pressed");
-        }
-
-        void ISubclass.AbilityTwo()
-        {
-            Debug.Log("INVOKER Ability Two Pressed");
-        }
-
-        void ISubclass.AbilityThree()
-        {
-            Debug.Log("INVOKER Ability Three Pressed");
-        }
+        public InvokerAbilityList AbilityOne { get; set; }
+        public InvokerAbilityList AbilityTwo { get; set; }
+        public InvokerAbilityList AbilityThree { get; set; }
 
         public Attributes GetAttributes()
         {
@@ -36,6 +25,21 @@ namespace Assets.Scripts.Classes.SubClasses
                 Defense = _defense,
                 Speed = _speed
             };
+        }
+
+        public void UseAbilityOne()
+        {
+            InvokerAbilityFactory.ActivateAbility(AbilityOne);
+        }
+
+        public void UseAbilityTwo()
+        {
+            InvokerAbilityFactory.ActivateAbility(AbilityTwo);
+        }
+
+        public void UseAbilityThree()
+        {
+            InvokerAbilityFactory.ActivateAbility(AbilityThree);
         }
     }
 }

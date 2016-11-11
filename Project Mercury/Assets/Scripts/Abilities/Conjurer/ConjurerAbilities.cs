@@ -4,26 +4,26 @@ namespace Assets.Scripts.Abilities.Conjurer
 {
     public enum ConjurerAbilityList
     {
-        BattleCry,
-        HeavySlash,
-        Taunt
+        MirrorWall,
+        Meteor,
+        Root
     }
 
     public class ConjurerAbilities
     {
-        public void BattleCry()
+        public void MirrorWall()
         {
-            Debug.Log("RAWWWRRRRRR!!!");
+            Debug.Log("Creates a wall infront of self, deflecting everything back");
         }
 
-        public void HeavySlash()
+        public void Meteor()
         {
-            Debug.Log("-Slings sword through the air-");
+            Debug.Log("-Calls to the heavens to launch a meteor down on target-");
         }
 
-        public void Taunt()
+        public void Root()
         {
-            Debug.Log("HAHAHAHAHA YOU CALL THAT A PUNCH");
+            Debug.Log("Binds everything in target area");
         }
     }
 }

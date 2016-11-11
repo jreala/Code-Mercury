@@ -2,19 +2,25 @@
 {
     public class RifterAbilityFactory
     {
-        public static void RifterAbility(RifterAbilityList ability)
+        private static RifterAbilities useAbility;
+        
+        public static void ActivateAbility(RifterAbilityList ability)
         {
-            var useAbility = new RifterAbilities();
+            if(useAbility == null)
+            {
+                useAbility = new RifterAbilities();
+            }
+
             switch(ability)
             {
-                case RifterAbilityList.BattleCry:
-                    useAbility.BattleCry();
+                case RifterAbilityList.Backstab:
+                    useAbility.Backstab();
                     break;
-                case RifterAbilityList.HeavySlash:
-                    useAbility.HeavySlash();
+                case RifterAbilityList.Warp:
+                    useAbility.Warp();
                     break;
-                case RifterAbilityList.Taunt:
-                    useAbility.Taunt();
+                case RifterAbilityList.Phase:
+                    useAbility.Phase();
                     break;
             }
         }

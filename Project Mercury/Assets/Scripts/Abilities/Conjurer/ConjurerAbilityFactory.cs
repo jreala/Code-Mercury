@@ -2,19 +2,25 @@
 {
     public class ConjurerAbilityFactory
     {
+        private static ConjurerAbilities useAbility;
+        
         public static void ActivateAbility(ConjurerAbilityList ability)
         {
-            var useAbility = new ConjurerAbilities();
+            if(useAbility == null)
+            {
+                useAbility = new ConjurerAbilities();
+            }
+
             switch(ability)
             {
-                case ConjurerAbilityList.BattleCry:
-                    useAbility.BattleCry();
+                case ConjurerAbilityList.MirrorWall:
+                    useAbility.MirrorWall();
                     break;
-                case ConjurerAbilityList.HeavySlash:
-                    useAbility.HeavySlash();
+                case ConjurerAbilityList.Meteor:
+                    useAbility.Meteor();
                     break;
-                case ConjurerAbilityList.Taunt:
-                    useAbility.Taunt();
+                case ConjurerAbilityList.Root:
+                    useAbility.Root();
                     break;
             }
         }

@@ -1,5 +1,5 @@
-﻿using Assets.Scripts.Player;
-using UnityEngine;
+﻿using Assets.Scripts.Abilities.Enhancer;
+using Assets.Scripts.Player;
 
 namespace Assets.Scripts.Classes.SubClasses
 {
@@ -11,20 +11,9 @@ namespace Assets.Scripts.Classes.SubClasses
         private const int _defense = 75;
         private const int _speed = 75;
 
-        void ISubclass.AbilityOne()
-        {
-            Debug.Log("ENHANCER Ability One Pressed");
-        }
-
-        void ISubclass.AbilityTwo()
-        {
-            Debug.Log("ENHANCER Ability Two Pressed");
-        }
-
-        void ISubclass.AbilityThree()
-        {
-            Debug.Log("ENHANCER Ability Three Pressed");
-        }
+        public EnhancerAbilityList AbilityOne { get; set; }
+        public EnhancerAbilityList AbilityTwo { get; set; }
+        public EnhancerAbilityList AbilityThree { get; set; }
 
         public Attributes GetAttributes()
         {
@@ -36,6 +25,21 @@ namespace Assets.Scripts.Classes.SubClasses
                 Defense = _defense,
                 Speed = _speed
             };
+        }
+
+        public void UseAbilityOne()
+        {
+            EnhancerAbilityFactory.ActivateAbility(AbilityOne);
+        }
+
+        public void UseAbilityTwo()
+        {
+            EnhancerAbilityFactory.ActivateAbility(AbilityTwo);
+        }
+
+        public void UseAbilityThree()
+        {
+            EnhancerAbilityFactory.ActivateAbility(AbilityThree);
         }
     }
 }

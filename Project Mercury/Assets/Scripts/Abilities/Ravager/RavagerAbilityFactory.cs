@@ -2,19 +2,25 @@
 {
     public class RavagerAbilityFactory
     {
+        private static RavagerAbilities useAbility;
+        
         public static void ActivateAbility(RavagerAbilityList ability)
         {
-            var useAbility = new RavagerAbilities();
+            if(useAbility == null)
+            {
+                useAbility = new RavagerAbilities();
+            }
+
             switch(ability)
             {
-                case RavagerAbilityList.BattleCry:
-                    useAbility.BattleCry();
+                case RavagerAbilityList.DestructiveForce:
+                    useAbility.DestructiveForce();
                     break;
-                case RavagerAbilityList.HeavySlash:
-                    useAbility.HeavySlash();
+                case RavagerAbilityList.Bloodweapon:
+                    useAbility.Bloodweapon();
                     break;
-                case RavagerAbilityList.Taunt:
-                    useAbility.Taunt();
+                case RavagerAbilityList.Overdrive:
+                    useAbility.Overdrive();
                     break;
             }
         }

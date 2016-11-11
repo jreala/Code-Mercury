@@ -4,26 +4,26 @@ namespace Assets.Scripts.Abilities.Enhancer
 {
     public enum EnhancerAbilityList
     {
-        BattleCry,
-        HeavySlash,
-        Taunt
+        Reflex,
+        SteeledBody,
+        Boost
     }
 
     public class EnhancerAbilities
     {
-        public void BattleCry()
+        public void Reflex()
         {
-            Debug.Log("RAWWWRRRRRR!!!");
+            Debug.Log("-Chance to counter attack-");
         }
 
-        public void HeavySlash()
+        public void SteeledBody()
         {
-            Debug.Log("-Slings sword through the air-");
+            Debug.Log("-Temporarily immune to physical damage-");
         }
 
-        public void Taunt()
+        public void Boost()
         {
-            Debug.Log("HAHAHAHAHA YOU CALL THAT A PUNCH");
+            Debug.Log("-Power increased-");
         }
     }
 }

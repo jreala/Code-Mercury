@@ -2,9 +2,15 @@
 {
     public class SpeedsterAbilityFactory
     {
+        private static SpeedsterAbilities useAbility;
+        
         public static void ActivateAbility(SpeedsterAbilityList ability)
         {
-            var useAbility = new AttackerAbilities();
+            if(useAbility == null)
+            {
+                useAbility = new SpeedsterAbilities();
+            }
+
             switch(ability)
             {
                 case SpeedsterAbilityList.Dash:

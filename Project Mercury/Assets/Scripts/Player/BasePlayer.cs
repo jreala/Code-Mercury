@@ -9,12 +9,8 @@ namespace Assets.Scripts.Player
         public IBaseClass BaseClass { get; private set; }
         public ISubclass SecondaryClass { get; private set; }
         public ISubclass TertiaryClass { get; private set; }
-
-        private BasePlayer()
-        {
-        }
          
-        public static BasePlayer GetInstance()
+        public static IBasePlayer GetInstance()
         {
             return _instance != null ? _instance : new BasePlayer();
         }
@@ -51,32 +47,38 @@ namespace Assets.Scripts.Player
         
         public void SecondaryAbilityOne()
         {
-            SecondaryClass.AbilityOne();
+            SecondaryClass.UseAbilityOne();
         }
         
         public void SecondaryAbilityTwo()
         {
-            SecondaryClass.AbilityTwo();
+            SecondaryClass.UseAbilityTwo();
         }
 
         public void SecondaryAbilityThree()
         {
-            SecondaryClass.AbilityThree();
+            SecondaryClass.UseAbilityThree();
         }
 
         public void TertiaryAbilityOne()
         {
-            TertiaryClass.AbilityOne();
+            TertiaryClass.UseAbilityOne();
         }
 
         public void TertiaryAbilityTwo()
         {
-            TertiaryClass.AbilityTwo();
+            TertiaryClass.UseAbilityTwo();
         }
 
         public void TertiaryAbilityThree()
         {
-            TertiaryClass.AbilityThree();
+            TertiaryClass.UseAbilityThree();
+        }
+
+        public override string ToString()
+        {
+            var player = "Base Class : " + BaseClass + "\t Instance: " + _instance;
+            return player;
         }
     }
 }

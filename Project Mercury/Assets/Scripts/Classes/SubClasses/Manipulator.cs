@@ -1,5 +1,5 @@
 ﻿using Assets.Scripts.Player;
-using UnityEngine;
+using Assets.Scripts.Abilities.Manipulator;
 
 namespace Assets.Scripts.Classes.SubClasses
 {
@@ -11,20 +11,9 @@ namespace Assets.Scripts.Classes.SubClasses
         private const int _defense = 50;
         private const int _speed = 25;
 
-        void ISubclass.AbilityOne()
-        {
-            Debug.Log("MANIPULATOR Ability One Pressed");
-        }
-
-        void ISubclass.AbilityTwo()
-        {
-            Debug.Log("MANIPULATOR Ability Two Pressed");
-        }
-
-        void ISubclass.AbilityThree()
-        {
-            Debug.Log("MANIPULATOR Ability Three Pressed");
-        }
+        public ManipulatorAbilityList AbilityOne { get; set; }
+        public ManipulatorAbilityList AbilityTwo { get; set; }
+        public ManipulatorAbilityList AbilityThree { get; set; }
 
         public Attributes GetAttributes()
         {
@@ -36,6 +25,21 @@ namespace Assets.Scripts.Classes.SubClasses
                 Defense = _defense,
                 Speed = _speed
             };
+        }
+
+        public void UseAbilityOne()
+        {
+            ManipulatorAbilityFactory.ActivateAbility(AbilityOne);
+        }
+
+        public void UseAbilityTwo()
+        {
+            ManipulatorAbilityFactory.ActivateAbility(AbilityTwo);
+        }
+
+        public void UseAbilityThree()
+        {
+            ManipulatorAbilityFactory.ActivateAbility(AbilityThree);
         }
     }
 }

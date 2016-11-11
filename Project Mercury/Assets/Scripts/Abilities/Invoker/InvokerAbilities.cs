@@ -4,26 +4,26 @@ namespace Assets.Scripts.Abilities.Invoker
 {
     public enum InvokerAbilityList
     {
-        BattleCry,
-        HeavySlash,
-        Taunt
+        Barrier,
+        HyperthermalCombustion,
+        ShadeStep
     }
 
     public class InvokerAbilities
     {
-        public void BattleCry()
+        public void Barrier()
         {
-            Debug.Log("RAWWWRRRRRR!!!");
+            Debug.Log("Negate incoming damage");
         }
 
-        public void HeavySlash()
+        public void HyperthermalCombustion()
         {
-            Debug.Log("-Slings sword through the air-");
+            Debug.Log("-Shoots an exploding burst of energy-");
         }
 
-        public void Taunt()
+        public void ShadeStep()
         {
-            Debug.Log("HAHAHAHAHA YOU CALL THAT A PUNCH");
+            Debug.Log("Travel between shadows");
         }
     }
 }

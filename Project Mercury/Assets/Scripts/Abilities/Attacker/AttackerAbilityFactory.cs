@@ -2,9 +2,15 @@
 {
     public class AttackerAbilityFactory
     {
+        private static AttackerAbilities useAbility;
+        
         public static void ActivateAbility(AttackerAbilityList ability)
         {
-            var useAbility = new AttackerAbilities();
+            if(useAbility == null)
+            {
+                useAbility = new AttackerAbilities();
+            }
+
             switch(ability)
             {
                 case AttackerAbilityList.Pierce:

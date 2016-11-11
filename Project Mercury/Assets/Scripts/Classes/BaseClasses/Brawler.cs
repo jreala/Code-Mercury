@@ -14,7 +14,7 @@ namespace Assets.Scripts.Classes.BaseClasses
         public BrawlerAbilityList AbilityOne { get; set; }
         public BrawlerAbilityList AbilityTwo { get; set; }
         public BrawlerAbilityList AbilityThree { get; set; }
-
+        
         public Attributes GetAttributes()
         {
             return new Attributes

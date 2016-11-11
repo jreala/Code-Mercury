@@ -1,20 +1,26 @@
 ﻿namespace Assets.Scripts.Abilities.Tracker
 {
-    public class TrackerAbilityFactory
+    public class TrackerAbilityFactory 
     {
-        public static void TrackerAbility(TrackerAbilityList ability)
+        private static TrackerAbilities useAbility;
+        
+        public static void ActivateAbility(TrackerAbilityList ability)
         {
-            var useAbility = new TrackerAbilities();
+            if(useAbility == null)
+            {
+                useAbility = new TrackerAbilities();
+            }
+
             switch(ability)
             {
-                case TrackerAbilityList.BattleCry:
-                    useAbility.BattleCry();
+                case TrackerAbilityList.CheetahStance:
+                    useAbility.CheetahStance();
                     break;
-                case TrackerAbilityList.HeavySlash:
-                    useAbility.HeavySlash();
+                case TrackerAbilityList.EagleEyes:
+                    useAbility.EagleEyes();
                     break;
-                case TrackerAbilityList.Taunt:
-                    useAbility.Taunt();
+                case TrackerAbilityList.HyenasHowl:
+                    useAbility.HyenasHowl();
                     break;
             }
         }

@@ -1,5 +1,6 @@
-﻿using Assets.Scripts.Player;
-using UnityEngine;
+﻿using System;
+using Assets.Scripts.Player;
+using Assets.Scripts.Abilities.Rifter;
 
 namespace Assets.Scripts.Classes.SubClasses
 {
@@ -11,20 +12,9 @@ namespace Assets.Scripts.Classes.SubClasses
         private const int _defense = 50;
         private const int _speed = 25;
 
-        void ISubclass.AbilityOne()
-        {
-            Debug.Log("RIFTER Ability One Pressed");
-        }
-
-        void ISubclass.AbilityTwo()
-        {
-            Debug.Log("RIFTER Ability Two Pressed");
-        }
-
-        void ISubclass.AbilityThree()
-        {
-            Debug.Log("RIFTER Ability Three Pressed");
-        }
+        public RifterAbilityList AbilityOne { get; set; }
+        public RifterAbilityList AbilityTwo { get; set; }
+        public RifterAbilityList AbilityThree { get; set; }
 
         public Attributes GetAttributes()
         {
@@ -36,6 +26,21 @@ namespace Assets.Scripts.Classes.SubClasses
                 Defense = _defense,
                 Speed = _speed
             };
+        }
+
+        public void UseAbilityOne()
+        {
+            RifterAbilityFactory.ActivateAbility(AbilityOne);
+        }
+
+        public void UseAbilityTwo()
+        {
+            RifterAbilityFactory.ActivateAbility(AbilityTwo);
+        }
+
+        public void UseAbilityThree()
+        {
+            RifterAbilityFactory.ActivateAbility(AbilityThree);
         }
     }
 }

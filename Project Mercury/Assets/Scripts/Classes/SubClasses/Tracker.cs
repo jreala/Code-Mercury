@@ -1,5 +1,6 @@
-﻿using Assets.Scripts.Player;
-using UnityEngine;
+﻿using System;
+using Assets.Scripts.Player;
+using Assets.Scripts.Abilities.Tracker;
 
 namespace Assets.Scripts.Classes.SubClasses
 {
@@ -10,21 +11,10 @@ namespace Assets.Scripts.Classes.SubClasses
         private const int _attack = 50;
         private const int _defense = 50;
         private const int _speed = 25;
-
-        void ISubclass.AbilityOne()
-        {
-            Debug.Log("TRACKER Ability One Pressed");
-        }
-
-        void ISubclass.AbilityTwo()
-        {
-            Debug.Log("TRACKER Ability Two Pressed");
-        }
-
-        void ISubclass.AbilityThree()
-        {
-            Debug.Log("TRACKER Ability Three Pressed");
-        }
+        
+        public TrackerAbilityList AbilityOne { get; set; }
+        public TrackerAbilityList AbilityTwo { get; set; }
+        public TrackerAbilityList AbilityThree { get; set; }
 
         public Attributes GetAttributes()
         {
@@ -36,6 +26,21 @@ namespace Assets.Scripts.Classes.SubClasses
                 Defense = _defense,
                 Speed = _speed
             };
+        }
+
+        public void UseAbilityOne()
+        {
+            TrackerAbilityFactory.ActivateAbility(AbilityOne);
+        }
+
+        public void UseAbilityTwo()
+        {
+            TrackerAbilityFactory.ActivateAbility(AbilityTwo);
+        }
+
+        public void UseAbilityThree()
+        {
+            TrackerAbilityFactory.ActivateAbility(AbilityThree);
         }
     }
 }

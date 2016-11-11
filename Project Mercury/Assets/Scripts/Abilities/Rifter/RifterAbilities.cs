@@ -4,26 +4,26 @@ namespace Assets.Scripts.Abilities.Rifter
 {
     public enum RifterAbilityList
     {
-        BattleCry,
-        HeavySlash,
-        Taunt
+        Backstab,
+        Warp,
+        Phase
     }
 
     public class RifterAbilities
     {
-        public void BattleCry()
+        public void Backstab()
         {
-            Debug.Log("RAWWWRRRRRR!!!");
+            Debug.Log("Teleports behind target and attacks");
         }
 
-        public void HeavySlash()
+        public void Warp()
         {
-            Debug.Log("-Slings sword through the air-");
+            Debug.Log("-Warps to targeted location-");
         }
 
-        public void Taunt()
+        public void Phase()
         {
-            Debug.Log("HAHAHAHAHA YOU CALL THAT A PUNCH");
+            Debug.Log("-Guaranteed dodge-");
         }
     }
 }

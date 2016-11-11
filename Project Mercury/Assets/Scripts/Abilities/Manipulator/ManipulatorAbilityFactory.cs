@@ -1,20 +1,26 @@
-﻿namespace Assets.Scripts.Abilities.Invoker
+﻿namespace Assets.Scripts.Abilities.Manipulator
 {
-    public class InvokerAbilityFactory
+    public class ManipulatorAbilityFactory
     {
-        public static void ActivateAbility(InvokerAbilityList ability)
+        private static ManipulatorAbilities useAbility;
+        
+        public static void ActivateAbility(ManipulatorAbilityList ability)
         {
-            var useAbility = new InvokerAbilities();
-            switch(ability)
+            if(useAbility == null)
             {
-                case InvokerAbilityList.BattleCry:
-                    useAbility.BattleCry();
+                useAbility = new ManipulatorAbilities();
+            }
+
+            switch (ability)
+            {
+                case ManipulatorAbilityList.Animate:
+                    useAbility.Animate();
                     break;
-                case InvokerAbilityList.HeavySlash:
-                    useAbility.HeavySlash();
+                case ManipulatorAbilityList.Release:
+                    useAbility.Release();
                     break;
-                case InvokerAbilityList.Taunt:
-                    useAbility.Taunt();
+                case ManipulatorAbilityList.Command:
+                    useAbility.Command();
                     break;
             }
         }

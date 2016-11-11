@@ -1,5 +1,5 @@
-﻿using Assets.Scripts.Player;
-using UnityEngine;
+﻿using Assets.Scripts.Abilities.Conjurer;
+using Assets.Scripts.Player;
 
 namespace Assets.Scripts.Classes.SubClasses
 {
@@ -11,20 +11,9 @@ namespace Assets.Scripts.Classes.SubClasses
         private const int _defense = 50;
         private const int _speed = 25;
 
-        void ISubclass.AbilityOne()
-        {
-            Debug.Log("CONJURER Ability One Pressed");
-        }
-
-        void ISubclass.AbilityTwo()
-        {
-            Debug.Log("CONJURER Ability Two Pressed");
-        }
-
-        void ISubclass.AbilityThree()
-        {
-            Debug.Log("CONJURER Ability Three Pressed");
-        }
+        public ConjurerAbilityList AbilityOne { get; set; }
+        public ConjurerAbilityList AbilityTwo { get; set; }
+        public ConjurerAbilityList AbilityThree { get; set; }
 
         public Attributes GetAttributes()
         {
@@ -36,6 +25,21 @@ namespace Assets.Scripts.Classes.SubClasses
                 Defense = _defense,
                 Speed = _speed
             };
+        }
+
+        public void UseAbilityOne()
+        {
+            ConjurerAbilityFactory.ActivateAbility(AbilityOne);
+        }
+
+        public void UseAbilityTwo()
+        {
+            ConjurerAbilityFactory.ActivateAbility(AbilityTwo);
+        }
+
+        public void UseAbilityThree()
+        {
+            ConjurerAbilityFactory.ActivateAbility(AbilityThree);
         }
     }
 }

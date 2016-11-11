@@ -4,26 +4,26 @@ namespace Assets.Scripts.Abilities.Tracker
 {
     public enum TrackerAbilityList
     {
-        BattleCry,
-        HeavySlash,
-        Taunt
+        EagleEyes,
+        HyenasHowl,
+        CheetahStance
     }
 
     public class TrackerAbilities
     {
-        public void BattleCry()
+        public void EagleEyes()
         {
-            Debug.Log("RAWWWRRRRRR!!!");
+            Debug.Log("Enhanced vision & double damage chance");
         }
 
-        public void HeavySlash()
+        public void HyenasHowl()
         {
-            Debug.Log("-Slings sword through the air-");
+            Debug.Log("-Cackle fills the air, instilling fear-");
         }
 
-        public void Taunt()
+        public void CheetahStance()
         {
-            Debug.Log("HAHAHAHAHA YOU CALL THAT A PUNCH");
+            Debug.Log("Increased Speed");
         }
     }
 }

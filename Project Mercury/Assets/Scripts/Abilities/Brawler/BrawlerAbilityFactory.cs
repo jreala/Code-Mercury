@@ -2,10 +2,16 @@
 {
     public class BrawlerAbilityFactory
     {
+        private static BrawlerAbilities useAbility;
+        
         public static void ActivateAbility(BrawlerAbilityList ability)
         {
-            var useAbility = new BrawlerAbilities();
-            switch(ability)
+            if(useAbility == null)
+            {
+                useAbility = new BrawlerAbilities();
+            }
+
+            switch (ability)
             {
                 case BrawlerAbilityList.BattleCry:
                     useAbility.BattleCry();

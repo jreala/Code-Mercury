@@ -2,12 +2,8 @@
 
 namespace Assets.Scripts.Classes.SubClasses
 {
-    public interface ISubclass
+    public interface ISubclass : IActivateAbilities
     {
-        void AbilityOne();
-        void AbilityTwo();
-        void AbilityThree();
-
         Attributes GetAttributes();
     }
 }

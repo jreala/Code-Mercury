@@ -4,26 +4,26 @@ namespace Assets.Scripts.Abilities.Manipulator
 {
     public enum ManipulatorAbilityList
     {
-        BattleCry,
-        HeavySlash,
-        Taunt
+        Animate,
+        Release,
+        Command
     }
 
     public class ManipulatorAbilities
     {
-        public void BattleCry()
+        public void Animate()
         {
-            Debug.Log("RAWWWRRRRRR!!!");
+            Debug.Log("Brings object to life");
         }
 
-        public void HeavySlash()
+        public void Release()
         {
-            Debug.Log("-Slings sword through the air-");
+            Debug.Log("Reverts object back to natural form");
         }
 
-        public void Taunt()
+        public void Command()
         {
-            Debug.Log("HAHAHAHAHA YOU CALL THAT A PUNCH");
+            Debug.Log("Orders object");
         }
     }
 }

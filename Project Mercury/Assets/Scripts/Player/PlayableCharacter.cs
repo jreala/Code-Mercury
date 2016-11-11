@@ -7,34 +7,19 @@ namespace Assets.Scripts.Player
 {
     public class PlayableCharacter : MonoBehaviour
     {
-        public float speed;
-        public BasePlayer _player;
+        public IBasePlayer _player;
         private Attributes _attributes;
-        private Rigidbody _playerBody;
         private ClassName _primaryClass;
         private ClassName _secondaryClass;
         private ClassName _tertiaryClass;
 
-        void Start()
+        void Awake()
         {
             _player = BasePlayer.GetInstance();
             _player.SetBaseClass(new Brawler());
             _player.SetSecondaryClass(new Manipulator());
             _player.SetTertiaryClass(new Conjurer());
-
-            _playerBody = GetComponent<Rigidbody>();
-
             CalculateAttributePoints();
-        }
-
-        void FixedUpdate()
-        {
-            var horizMovement = Input.GetAxis("Horizontal");
-            var vertMovement = Input.GetAxis("Vertical");
-
-            var movement = new Vector3(horizMovement, 0.0f, vertMovement);
-
-            _playerBody.velocity = movement * speed;
         }
         
         void Update()
@@ -45,7 +30,7 @@ namespace Assets.Scripts.Player
         private void ActivateAbility()
         {
             if (Input.GetButtonDown("AbilityOne") && !(Input.GetButton("L2") || Input.GetButton("R2")))
-            {
+            {   
                 _player.BaseAbilityOne();
             }
 
@@ -97,8 +82,6 @@ namespace Assets.Scripts.Player
                 ? _player.BaseClass.GetAttributes() + _player.SecondaryClass.GetAttributes() + _player.TertiaryClass.GetAttributes()
                 : _player.BaseClass.GetAttributes() + _player.SecondaryClass.GetAttributes()
                 : _player.BaseClass.GetAttributes();
-
-            Debug.Log(_attributes.ToString());
         }
     }
 }

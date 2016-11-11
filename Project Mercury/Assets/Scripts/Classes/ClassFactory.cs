@@ -1,5 +1,6 @@
 ﻿using Assets.Scripts.Classes.BaseClasses;
 using Assets.Scripts.Classes.SubClasses;
+using UnityEngine;
 
 namespace Assets.Scripts.Classes
 {
@@ -7,13 +8,16 @@ namespace Assets.Scripts.Classes
     {
         public IBaseClass CreateClass(ClassName name)
         {
+            Debug.Log("Creating base class... " + name);
             switch(name)
             {
                 case ClassName.Attacker: return new Attacker();
                 case ClassName.Brawler: return new Brawler();
                 case ClassName.Defender: return new Defender();
                 case ClassName.Speedster: return new Speedster();
-                default: return null;
+                default:
+                    Debug.Log("Hit default");
+                    return null;
             }
         }
 

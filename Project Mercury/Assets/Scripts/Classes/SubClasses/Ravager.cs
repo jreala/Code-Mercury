@@ -1,5 +1,6 @@
-﻿using Assets.Scripts.Player;
-using UnityEngine;
+﻿using System;
+using Assets.Scripts.Player;
+using Assets.Scripts.Abilities.Ravager;
 
 namespace Assets.Scripts.Classes.SubClasses
 {
@@ -11,20 +12,9 @@ namespace Assets.Scripts.Classes.SubClasses
         private const int _defense = 50;
         private const int _speed = 25;
 
-        void ISubclass.AbilityOne()
-        {
-            Debug.Log("RAVAGER Ability One Pressed");
-        }
-
-        void ISubclass.AbilityTwo()
-        {
-            Debug.Log("RAVAGER Ability Two Pressed");
-        }
-
-        void ISubclass.AbilityThree()
-        {
-            Debug.Log("RAVAGER Ability Three Pressed");
-        }
+        public RavagerAbilityList AbilityOne { get; set; }
+        public RavagerAbilityList AbilityTwo { get; set; }
+        public RavagerAbilityList AbilityThree { get; set; }
 
         public Attributes GetAttributes()
         {
@@ -36,6 +26,21 @@ namespace Assets.Scripts.Classes.SubClasses
                 Defense = _defense,
                 Speed = _speed
             };
+        }
+
+        public void UseAbilityOne()
+        {
+            RavagerAbilityFactory.ActivateAbility(AbilityOne);
+        }
+
+        public void UseAbilityTwo()
+        {
+            RavagerAbilityFactory.ActivateAbility(AbilityTwo);
+        }
+
+        public void UseAbilityThree()
+        {
+            RavagerAbilityFactory.ActivateAbility(AbilityTwo);
         }
     }
 }

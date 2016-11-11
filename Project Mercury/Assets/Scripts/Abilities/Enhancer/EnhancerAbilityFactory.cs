@@ -2,19 +2,25 @@
 {
     public class EnhancerAbilityFactory
     {
+        private static EnhancerAbilities useAbility;
+        
         public static void ActivateAbility(EnhancerAbilityList ability)
         {
-            var useAbility = new EnhancerAbilities();
+            if(useAbility == null)
+            {
+                useAbility = new EnhancerAbilities();
+            }
+
             switch(ability)
             {
-                case EnhancerAbilityList.BattleCry:
-                    useAbility.BattleCry();
+                case EnhancerAbilityList.Reflex:
+                    useAbility.Reflex();
                     break;
-                case EnhancerAbilityList.HeavySlash:
-                    useAbility.HeavySlash();
+                case EnhancerAbilityList.SteeledBody:
+                    useAbility.SteeledBody();
                     break;
-                case EnhancerAbilityList.Taunt:
-                    useAbility.Taunt();
+                case EnhancerAbilityList.Boost:
+                    useAbility.Boost();
                     break;
             }
         }

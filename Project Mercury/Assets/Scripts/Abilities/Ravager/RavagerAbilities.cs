@@ -4,26 +4,26 @@ namespace Assets.Scripts.Abilities.Ravager
 {
     public enum RavagerAbilityList
     {
-        BattleCry,
-        HeavySlash,
-        Taunt
+        Bloodweapon,
+        Overdrive,
+        DestructiveForce
     }
 
     public class RavagerAbilities
     {
-        public void BattleCry()
+        public void Bloodweapon()
         {
-            Debug.Log("RAWWWRRRRRR!!!");
+            Debug.Log("Steals the health of his enemies equivalent to damage dealt");
         }
 
-        public void HeavySlash()
+        public void Overdrive()
         {
-            Debug.Log("-Slings sword through the air-");
+            Debug.Log("Greatly increases power beyond natural limits");
         }
 
-        public void Taunt()
+        public void DestructiveForce()
         {
-            Debug.Log("HAHAHAHAHA YOU CALL THAT A PUNCH");
+            Debug.Log("Strikes the ground, paralyzing enemies with fear");
         }
     }
 }

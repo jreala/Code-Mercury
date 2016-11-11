@@ -2,9 +2,15 @@
 {
     public class DefenderAbilityFactory
     {
+        private static DefenderAbilities useAbility;
+        
         public static void ActivateAbility(DefenderAbilityList ability)
         {
-            var useAbility = new DefenderAbilities();
+            if(useAbility == null)
+            {
+                useAbility = new DefenderAbilities();
+            }
+
             switch(ability)
             {
                 case DefenderAbilityList.IronStance:

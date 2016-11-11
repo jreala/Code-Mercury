@@ -9,7 +9,7 @@ namespace Assets.Scripts.Abilities.Speedster
         Backstab
     }
 
-    public class AttackerAbilities
+    public class SpeedsterAbilities
     {
         public void Dash()
         {
