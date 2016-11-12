@@ -4,6 +4,7 @@ namespace Assets.Scripts.Abilities.Attacker
 {
     public enum AttackerAbilityList
     {
+        None,
         Pierce,
         Berserk,
         Bloodthirst

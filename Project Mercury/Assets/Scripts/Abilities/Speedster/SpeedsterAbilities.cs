@@ -4,6 +4,7 @@ namespace Assets.Scripts.Abilities.Speedster
 {
     public enum SpeedsterAbilityList
     {
+        None,
         Dash,
         Feint,
         Backstab

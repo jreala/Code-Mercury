@@ -42,5 +42,10 @@ namespace Assets.Scripts.Classes.SubClasses
         {
             RavagerAbilityFactory.ActivateAbility(AbilityTwo);
         }
+
+        public ClassName GetClassName()
+        {
+            return ClassName.Ravager;
+        }
     }
 }

@@ -4,6 +4,7 @@ namespace Assets.Scripts.Abilities.Conjurer
 {
     public enum ConjurerAbilityList
     {
+        None,
         MirrorWall,
         Meteor,
         Root

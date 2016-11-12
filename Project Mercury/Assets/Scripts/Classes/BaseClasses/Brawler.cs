@@ -1,9 +1,10 @@
 ﻿using Assets.Scripts.Player;
 using Assets.Scripts.Abilities.Brawler;
+using System;
 
 namespace Assets.Scripts.Classes.BaseClasses
 {
-    public class Brawler : IBaseClass
+    public class Brawler : IBaseClass, IHaveAbilities<BrawlerAbilityList>
     {
         private const int _health = 200;
         private const int _energy = 100;
@@ -45,6 +46,36 @@ namespace Assets.Scripts.Classes.BaseClasses
         public void UseAbilityThree()
         {
             BrawlerAbilityFactory.ActivateAbility(AbilityThree);
+        }
+
+        public BrawlerAbilityList GetAbilityOne()
+        {
+            throw new NotImplementedException();
+        }
+
+        public BrawlerAbilityList GetAbilityTwo()
+        {
+            throw new NotImplementedException();
+        }
+
+        public BrawlerAbilityList GetAbilityThree()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SetAbilityOne()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SetAbilityTwo()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SetAbilityThree()
+        {
+            throw new NotImplementedException();
         }
     }
 }

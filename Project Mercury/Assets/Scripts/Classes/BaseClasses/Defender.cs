@@ -1,9 +1,10 @@
 ﻿using Assets.Scripts.Player;
 using Assets.Scripts.Abilities.Defender;
+using System;
 
 namespace Assets.Scripts.Classes.BaseClasses
 {
-    public class Defender : IBaseClass
+    public class Defender : IBaseClass, IHaveAbilities<DefenderAbilityList>
     {
         private const int _health = 200;
         private const int _energy = 100;
@@ -45,6 +46,36 @@ namespace Assets.Scripts.Classes.BaseClasses
         public void UseAbilityThree()
         {
             DefenderAbilityFactory.ActivateAbility(AbilityThree);
+        }
+
+        public DefenderAbilityList GetAbilityOne()
+        {
+            throw new NotImplementedException();
+        }
+
+        public DefenderAbilityList GetAbilityTwo()
+        {
+            throw new NotImplementedException();
+        }
+
+        public DefenderAbilityList GetAbilityThree()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SetAbilityOne()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SetAbilityTwo()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SetAbilityThree()
+        {
+            throw new NotImplementedException();
         }
     }
 }

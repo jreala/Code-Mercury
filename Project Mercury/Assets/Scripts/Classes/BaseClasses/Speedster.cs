@@ -1,16 +1,17 @@
 ﻿using Assets.Scripts.Player;
 using Assets.Scripts.Abilities.Speedster;
+using System;
 
 namespace Assets.Scripts.Classes.BaseClasses
 {
-    public class Speedster : IBaseClass
+    public class Speedster : IBaseClass, IHaveAbilities<SpeedsterAbilityList>
     {
         private const int _health = 200;
         private const int _energy = 100;
         private const int _attack = 125;
         private const int _defense = 75;
         private const int _speed = 200;
-        
+
         public SpeedsterAbilityList AbilityOne { get; set; }
         public SpeedsterAbilityList AbilityTwo { get; set; }
         public SpeedsterAbilityList AbilityThree { get; set; }

@@ -1,9 +1,10 @@
 ﻿using Assets.Scripts.Player;
 using Assets.Scripts.Abilities.Attacker;
+using System;
 
 namespace Assets.Scripts.Classes.BaseClasses
 {
-    public class Attacker : IBaseClass
+    public class Attacker : IBaseClass, IHaveAbilities<AttackerAbilityList>
     {
         private const int _health = 100;
         private const int _energy = 100;

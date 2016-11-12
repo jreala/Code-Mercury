@@ -4,6 +4,7 @@ namespace Assets.Scripts.Abilities.Enhancer
 {
     public enum EnhancerAbilityList
     {
+        None,
         Reflex,
         SteeledBody,
         Boost

@@ -42,5 +42,10 @@ namespace Assets.Scripts.Classes.SubClasses
         {
             RifterAbilityFactory.ActivateAbility(AbilityThree);
         }
+
+        public ClassName GetClassName()
+        {
+            return ClassName.Rifter;
+        }
     }
 }

@@ -4,6 +4,7 @@ namespace Assets.Scripts.Abilities.Invoker
 {
     public enum InvokerAbilityList
     {
+        None,
         Barrier,
         HyperthermalCombustion,
         ShadeStep

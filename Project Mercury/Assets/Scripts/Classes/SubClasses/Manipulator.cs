@@ -41,5 +41,10 @@ namespace Assets.Scripts.Classes.SubClasses
         {
             ManipulatorAbilityFactory.ActivateAbility(AbilityThree);
         }
+
+        public ClassName GetClassName()
+        {
+            return ClassName.Manipulator;
+        }
     }
 }

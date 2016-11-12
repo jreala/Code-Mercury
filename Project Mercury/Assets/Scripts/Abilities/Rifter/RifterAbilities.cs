@@ -4,6 +4,7 @@ namespace Assets.Scripts.Abilities.Rifter
 {
     public enum RifterAbilityList
     {
+        None,
         Backstab,
         Warp,
         Phase

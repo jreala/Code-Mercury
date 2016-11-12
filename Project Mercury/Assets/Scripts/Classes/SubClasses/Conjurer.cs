@@ -1,4 +1,5 @@
-﻿using Assets.Scripts.Abilities.Conjurer;
+﻿using System;
+using Assets.Scripts.Abilities.Conjurer;
 using Assets.Scripts.Player;
 
 namespace Assets.Scripts.Classes.SubClasses
@@ -40,6 +41,11 @@ namespace Assets.Scripts.Classes.SubClasses
         public void UseAbilityThree()
         {
             ConjurerAbilityFactory.ActivateAbility(AbilityThree);
+        }
+
+        public ClassName GetClassName()
+        {
+            return ClassName.Conjurer;
         }
     }
 }

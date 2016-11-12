@@ -4,6 +4,7 @@ namespace Assets.Scripts.Abilities.Brawler
 {
     public enum BrawlerAbilityList
     {
+        None,
         BattleCry,
         HeavySlash,
         Taunt

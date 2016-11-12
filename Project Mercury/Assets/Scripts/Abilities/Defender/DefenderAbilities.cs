@@ -4,6 +4,7 @@ namespace Assets.Scripts.Abilities.Defender
 {
     public enum DefenderAbilityList
     {
+        None,
         IronStance,
         Retaliate,
         BulkUp

@@ -1,4 +1,5 @@
-﻿using Assets.Scripts.Abilities.Enhancer;
+﻿using System;
+using Assets.Scripts.Abilities.Enhancer;
 using Assets.Scripts.Player;
 
 namespace Assets.Scripts.Classes.SubClasses
@@ -40,6 +41,11 @@ namespace Assets.Scripts.Classes.SubClasses
         public void UseAbilityThree()
         {
             EnhancerAbilityFactory.ActivateAbility(AbilityThree);
+        }
+
+        public ClassName GetClassName()
+        {
+            return ClassName.Enhancer;
         }
     }
 }

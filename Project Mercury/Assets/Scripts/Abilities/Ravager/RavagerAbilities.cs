@@ -4,6 +4,7 @@ namespace Assets.Scripts.Abilities.Ravager
 {
     public enum RavagerAbilityList
     {
+        None,
         Bloodweapon,
         Overdrive,
         DestructiveForce

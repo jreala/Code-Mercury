@@ -4,6 +4,7 @@ namespace Assets.Scripts.Abilities.Manipulator
 {
     public enum ManipulatorAbilityList
     {
+        None,
         Animate,
         Release,
         Command

@@ -4,6 +4,7 @@ namespace Assets.Scripts.Abilities.Tracker
 {
     public enum TrackerAbilityList
     {
+        None,
         EagleEyes,
         HyenasHowl,
         CheetahStance

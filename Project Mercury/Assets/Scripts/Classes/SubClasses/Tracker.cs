@@ -42,5 +42,10 @@ namespace Assets.Scripts.Classes.SubClasses
         {
             TrackerAbilityFactory.ActivateAbility(AbilityThree);
         }
+
+        public ClassName GetClassName()
+        {
+            return ClassName.Tracker;
+        }
     }
 }

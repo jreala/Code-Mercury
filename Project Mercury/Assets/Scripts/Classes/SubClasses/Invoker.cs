@@ -1,5 +1,6 @@
 ﻿using Assets.Scripts.Player;
 using Assets.Scripts.Abilities.Invoker;
+using System;
 
 namespace Assets.Scripts.Classes.SubClasses
 {
@@ -40,6 +41,11 @@ namespace Assets.Scripts.Classes.SubClasses
         public void UseAbilityThree()
         {
             InvokerAbilityFactory.ActivateAbility(AbilityThree);
+        }
+
+        public ClassName GetClassName()
+        {
+            return ClassName.Invoker;
         }
     }
 }
