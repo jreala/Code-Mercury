@@ -1,6 +1,5 @@
-﻿using System;
-using Assets.Scripts.Abilities.Enhancer;
-using Assets.Scripts.Player;
+﻿using Assets.Scripts.Abilities.Enhancer;
+using Assets.Scripts.Dto;
 
 namespace Assets.Scripts.Classes.SubClasses
 {
@@ -16,9 +15,9 @@ namespace Assets.Scripts.Classes.SubClasses
         public EnhancerAbilityList AbilityTwo { get; set; }
         public EnhancerAbilityList AbilityThree { get; set; }
 
-        public Attributes GetAttributes()
+        public AttributesDto GetAttributes()
         {
-            return new Attributes
+            return new AttributesDto
             {
                 Health = _health,
                 Energy = _energy,

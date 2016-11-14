@@ -1,5 +1,4 @@
-﻿using System;
-using Assets.Scripts.Player;
+﻿using Assets.Scripts.Dto;
 using Assets.Scripts.Abilities.Rifter;
 
 namespace Assets.Scripts.Classes.SubClasses
@@ -16,9 +15,9 @@ namespace Assets.Scripts.Classes.SubClasses
         public RifterAbilityList AbilityTwo { get; set; }
         public RifterAbilityList AbilityThree { get; set; }
 
-        public Attributes GetAttributes()
+        public AttributesDto GetAttributes()
         {
-            return new Attributes
+            return new AttributesDto
             {
                 Health = _health,
                 Energy = _energy,

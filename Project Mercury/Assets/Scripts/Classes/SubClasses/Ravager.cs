@@ -1,5 +1,4 @@
-﻿using System;
-using Assets.Scripts.Player;
+﻿using Assets.Scripts.Dto;
 using Assets.Scripts.Abilities.Ravager;
 
 namespace Assets.Scripts.Classes.SubClasses
@@ -16,9 +15,9 @@ namespace Assets.Scripts.Classes.SubClasses
         public RavagerAbilityList AbilityTwo { get; set; }
         public RavagerAbilityList AbilityThree { get; set; }
 
-        public Attributes GetAttributes()
+        public AttributesDto GetAttributes()
         {
-            return new Attributes
+            return new AttributesDto
             {
                 Health = _health,
                 Energy = _energy,

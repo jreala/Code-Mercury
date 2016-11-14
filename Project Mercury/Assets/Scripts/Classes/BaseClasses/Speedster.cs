@@ -1,6 +1,5 @@
-﻿using Assets.Scripts.Player;
+﻿using Assets.Scripts.Dto;
 using Assets.Scripts.Abilities.Speedster;
-using System;
 
 namespace Assets.Scripts.Classes.BaseClasses
 {
@@ -16,9 +15,9 @@ namespace Assets.Scripts.Classes.BaseClasses
         public SpeedsterAbilityList AbilityTwo { get; set; }
         public SpeedsterAbilityList AbilityThree { get; set; }
 
-        public Attributes GetAttributes()
+        public AttributesDto GetAttributes()
         {
-            return new Attributes
+            return new AttributesDto
             {
                 Health = _health,
                 Energy = _energy,

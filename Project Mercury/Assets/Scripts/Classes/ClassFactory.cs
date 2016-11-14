@@ -1,6 +1,5 @@
 ﻿using Assets.Scripts.Classes.BaseClasses;
 using Assets.Scripts.Classes.SubClasses;
-using UnityEngine;
 
 namespace Assets.Scripts.Classes
 {

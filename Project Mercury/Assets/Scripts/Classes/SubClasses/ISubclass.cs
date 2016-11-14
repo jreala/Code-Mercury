@@ -1,11 +1,11 @@
-﻿using Assets.Scripts.Player;
+﻿using Assets.Scripts.Dto;
 using Assets.Scripts.Abilities;
 
 namespace Assets.Scripts.Classes.SubClasses
 {
     public interface ISubclass : IActivateAbilities
     {
-        Attributes GetAttributes();
+        AttributesDto GetAttributes();
         ClassName GetClassName();
     }
 }

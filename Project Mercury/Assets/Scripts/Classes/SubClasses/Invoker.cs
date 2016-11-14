@@ -1,6 +1,5 @@
-﻿using Assets.Scripts.Player;
+﻿using Assets.Scripts.Dto;
 using Assets.Scripts.Abilities.Invoker;
-using System;
 
 namespace Assets.Scripts.Classes.SubClasses
 {
@@ -16,9 +15,9 @@ namespace Assets.Scripts.Classes.SubClasses
         public InvokerAbilityList AbilityTwo { get; set; }
         public InvokerAbilityList AbilityThree { get; set; }
 
-        public Attributes GetAttributes()
+        public AttributesDto GetAttributes()
         {
-            return new Attributes
+            return new AttributesDto
             {
                 Health = _health,
                 Energy = _energy,

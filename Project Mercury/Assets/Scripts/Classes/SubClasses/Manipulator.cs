@@ -1,4 +1,4 @@
-﻿using Assets.Scripts.Player;
+﻿using Assets.Scripts.Dto;
 using Assets.Scripts.Abilities.Manipulator;
 
 namespace Assets.Scripts.Classes.SubClasses
@@ -15,9 +15,9 @@ namespace Assets.Scripts.Classes.SubClasses
         public ManipulatorAbilityList AbilityTwo { get; set; }
         public ManipulatorAbilityList AbilityThree { get; set; }
 
-        public Attributes GetAttributes()
+        public AttributesDto GetAttributes()
         {
-            return new Attributes
+            return new AttributesDto
             {
                 Health = _health,
                 Energy = _energy,

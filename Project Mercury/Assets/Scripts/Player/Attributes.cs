@@ -11,8 +11,7 @@ namespace Assets.Scripts.Player
         public int Speed { get; set; }
         
         private IBasePlayer _basePlayer;
-        private 
-
+        
         void Start()
         {
             _basePlayer = GetComponent<PlayableCharacter>().player;

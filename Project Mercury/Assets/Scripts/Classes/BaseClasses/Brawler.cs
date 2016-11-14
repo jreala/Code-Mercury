@@ -1,6 +1,5 @@
-﻿using Assets.Scripts.Player;
+﻿using Assets.Scripts.Dto;
 using Assets.Scripts.Abilities.Brawler;
-using System;
 
 namespace Assets.Scripts.Classes.BaseClasses
 {
@@ -16,9 +15,9 @@ namespace Assets.Scripts.Classes.BaseClasses
         public BrawlerAbilityList AbilityTwo { get; set; }
         public BrawlerAbilityList AbilityThree { get; set; }
         
-        public Attributes GetAttributes()
+        public AttributesDto GetAttributes()
         {
-            return new Attributes
+            return new AttributesDto
             {
                 Health = _health,
                 Energy = _energy,
@@ -46,36 +45,6 @@ namespace Assets.Scripts.Classes.BaseClasses
         public void UseAbilityThree()
         {
             BrawlerAbilityFactory.ActivateAbility(AbilityThree);
-        }
-
-        public BrawlerAbilityList GetAbilityOne()
-        {
-            throw new NotImplementedException();
-        }
-
-        public BrawlerAbilityList GetAbilityTwo()
-        {
-            throw new NotImplementedException();
-        }
-
-        public BrawlerAbilityList GetAbilityThree()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void SetAbilityOne()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void SetAbilityTwo()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void SetAbilityThree()
-        {
-            throw new NotImplementedException();
         }
     }
 }
