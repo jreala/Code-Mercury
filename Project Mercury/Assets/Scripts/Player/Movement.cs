@@ -5,12 +5,12 @@ namespace Assets.Scripts.Player
     public class Movement : MonoBehaviour
     {
         private const float speed = 1.0f;
-        private CharacterController _controller;
-        private Vector3 moveDirection = Vector3.zero;
+        private Rigidbody2D _controller;
+        private Vector2 moveDirection = Vector2.zero;
 
         void Awake()
         {
-            _controller = GetComponent<CharacterController>();
+            _controller = GetComponent<Rigidbody2D>();
         }
         
         void FixedUpdate()
@@ -18,11 +18,11 @@ namespace Assets.Scripts.Player
             var horizMovement = Input.GetAxis("Horizontal");
             var vertMovement = Input.GetAxis("Vertical");
 
-            moveDirection = new Vector3(horizMovement, 0.0f, vertMovement);
+            moveDirection = new Vector2(horizMovement, vertMovement);
             moveDirection = transform.TransformDirection(moveDirection);
-            moveDirection *= speed;
+            moveDirection *= speed * Time.deltaTime;
 
-            _controller.Move(moveDirection);
+            _controller.MovePosition(_controller.position + (moveDirection * speed * Time.deltaTime));
         }
     }
 }
