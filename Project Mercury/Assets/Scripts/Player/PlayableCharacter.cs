@@ -15,9 +15,6 @@ namespace Assets.Scripts.Player
         void Awake()
         {
             player = BasePlayer.GetInstance();
-            player.SetBaseClass(new Brawler());
-            player.SetSecondaryClass(new Manipulator());
-            player.SetTertiaryClass(new Conjurer());
         }
     }
 }

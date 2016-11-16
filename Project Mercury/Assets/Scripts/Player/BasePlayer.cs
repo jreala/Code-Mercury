@@ -12,7 +12,11 @@ namespace Assets.Scripts.Player
          
         public static IBasePlayer GetInstance()
         {
-            return _instance != null ? _instance : new BasePlayer();
+            if(_instance == null)
+            {
+                _instance = new BasePlayer();
+            }
+            return _instance;
         }
 
         public void SetBaseClass(IBaseClass baseClass)
