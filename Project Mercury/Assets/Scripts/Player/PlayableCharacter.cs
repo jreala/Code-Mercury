@@ -1,6 +1,4 @@
 ﻿using UnityEngine;
-using Assets.Scripts.Classes.BaseClasses;
-using Assets.Scripts.Classes.SubClasses;
 using Assets.Scripts.Classes;
 
 namespace Assets.Scripts.Player

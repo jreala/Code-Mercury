@@ -8,6 +8,7 @@ namespace Assets.Scripts.UI
     public class CreateCharacter : MonoBehaviour
     {
         private ClassFactory _classFactory;
+        public Transform PlayableCharacter;
 
         void Awake()
         {
@@ -19,6 +20,7 @@ namespace Assets.Scripts.UI
             var className = EnumUtil.ParseEnum<ClassName>(primary);
             BasePlayer.GetInstance().SetBaseClass(_classFactory.CreateClass(className));
             Debug.Log(BasePlayer.GetInstance().BaseClass.ToString());
+            Instantiate(PlayableCharacter, transform.position, Quaternion.identity);
         }
     }
 }

@@ -3,23 +3,23 @@
 namespace Assets.Scripts.Player
 {
     public class Attributes : MonoBehaviour
-    {   
+    {
         public int Health { get; set; }
         public int Energy { get; set; }
         public int Attack { get; set; }
         public int Defense { get; set; }
         public int Speed { get; set; }
-        
+
         private IBasePlayer _basePlayer;
-        
+
         void Start()
         {
             _basePlayer = GetComponent<PlayableCharacter>().player;
             CalculateAttributePoints();
             Debug.Log(ToString());
         }
-        
-        public static Attributes operator+ (Attributes a, Attributes b)
+
+        public static Attributes operator +(Attributes a, Attributes b)
         {
             if (b == null) return a;
 
