@@ -4,6 +4,10 @@
     {
         private static RifterAbilities useAbility;
         
+        /// <summary>
+        /// Activate Rifter ability
+        /// </summary>
+        /// <param name="ability"></param>
         public static void ActivateAbility(RifterAbilityList ability)
         {
             if(useAbility == null)

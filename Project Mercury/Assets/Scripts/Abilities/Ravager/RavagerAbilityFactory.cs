@@ -4,6 +4,10 @@
     {
         private static RavagerAbilities useAbility;
         
+        /// <summary>
+        /// Activate Ravager ability
+        /// </summary>
+        /// <param name="ability"></param>
         public static void ActivateAbility(RavagerAbilityList ability)
         {
             if(useAbility == null)

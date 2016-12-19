@@ -5,21 +5,31 @@ namespace Assets.Scripts.Classes
 {
     public class ClassFactory
     {
+        /// <summary>
+        /// Create a main class
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
         public IBaseClass CreateClass(ClassName name)
         {
-            switch(name)
+            switch (name)
             {
                 case ClassName.Attacker: return new Attacker();
                 case ClassName.Brawler: return new Brawler();
                 case ClassName.Defender: return new Defender();
-                case ClassName.Speedster: return new Speedster();
+                case ClassName.Trickster: return new Trickster();
                 default: return null;
             }
         }
 
+        /// <summary>
+        /// Create a subclass
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
         public ISubclass CreateSubClass(ClassName name)
         {
-            switch(name)
+            switch (name)
             {
                 case ClassName.Conjurer: return new Conjurer();
                 case ClassName.Enhancer: return new Enhancer();

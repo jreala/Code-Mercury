@@ -9,26 +9,38 @@ namespace Assets.Scripts.Player
         public IBaseClass BaseClass { get; private set; }
         public ISubclass SecondaryClass { get; private set; }
         public ISubclass TertiaryClass { get; private set; }
-         
+
         public static IBasePlayer GetInstance()
         {
-            if(_instance == null)
+            if (_instance == null)
             {
                 _instance = new BasePlayer();
             }
             return _instance;
         }
 
+        /// <summary>
+        /// Assign main class
+        /// </summary>
+        /// <param name="baseClass"></param>
         public void SetBaseClass(IBaseClass baseClass)
         {
             BaseClass = baseClass;
         }
 
+        /// <summary>
+        /// Assign secondary class
+        /// </summary>
+        /// <param name="secondaryClass"></param>
         public void SetSecondaryClass(ISubclass secondaryClass)
         {
             SecondaryClass = secondaryClass;
         }
 
+        /// <summary>
+        /// Assign tertiary class
+        /// </summary>
+        /// <param name="tertiaryClass"></param>
         public void SetTertiaryClass(ISubclass tertiaryClass)
         {
             TertiaryClass = tertiaryClass;
@@ -48,12 +60,12 @@ namespace Assets.Scripts.Player
         {
             BaseClass.UseAbilityThree();
         }
-        
+
         public void SecondaryAbilityOne()
         {
             SecondaryClass.UseAbilityOne();
         }
-        
+
         public void SecondaryAbilityTwo()
         {
             SecondaryClass.UseAbilityTwo();

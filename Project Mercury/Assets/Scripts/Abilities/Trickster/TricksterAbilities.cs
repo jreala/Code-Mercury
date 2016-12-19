@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 
-namespace Assets.Scripts.Abilities.Speedster
+namespace Assets.Scripts.Abilities.Trickster
 {
-    public enum SpeedsterAbilityList
+    public enum TricksterAbilityList
     {
         None,
         Dash,
@@ -10,7 +10,7 @@ namespace Assets.Scripts.Abilities.Speedster
         Backstab
     }
 
-    public class SpeedsterAbilities
+    public class TricksterAbilities
     {
         public void Dash()
         {
