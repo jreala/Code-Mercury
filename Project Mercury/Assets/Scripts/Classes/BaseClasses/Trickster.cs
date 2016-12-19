@@ -1,9 +1,9 @@
 ﻿using Assets.Scripts.Dto;
-using Assets.Scripts.Abilities.Speedster;
+using Assets.Scripts.Abilities.Trickster;
 
 namespace Assets.Scripts.Classes.BaseClasses
 {
-    public class Speedster : IBaseClass, IHaveAbilities<SpeedsterAbilityList>
+    public class Trickster : IBaseClass, IHaveAbilities<TricksterAbilityList>
     {
         private const int _health = 200;
         private const int _energy = 100;
@@ -11,9 +11,9 @@ namespace Assets.Scripts.Classes.BaseClasses
         private const int _defense = 75;
         private const int _speed = 200;
 
-        public SpeedsterAbilityList AbilityOne { get; set; }
-        public SpeedsterAbilityList AbilityTwo { get; set; }
-        public SpeedsterAbilityList AbilityThree { get; set; }
+        public TricksterAbilityList AbilityOne { get; set; }
+        public TricksterAbilityList AbilityTwo { get; set; }
+        public TricksterAbilityList AbilityThree { get; set; }
 
         public AttributesDto GetAttributes()
         {
@@ -29,22 +29,22 @@ namespace Assets.Scripts.Classes.BaseClasses
 
         public ClassName GetClassName()
         {
-            return ClassName.Speedster;
+            return ClassName.Trickster;
         }
 
         public void UseAbilityOne()
         {
-            SpeedsterAbilityFactory.ActivateAbility(AbilityOne);
+            TricksterAbilityFactory.ActivateAbility(AbilityOne);
         }
 
         public void UseAbilityTwo()
         {
-            SpeedsterAbilityFactory.ActivateAbility(AbilityTwo);
+            TricksterAbilityFactory.ActivateAbility(AbilityTwo);
         }
 
         public void UseAbilityThree()
         {
-            SpeedsterAbilityFactory.ActivateAbility(AbilityThree);
+            TricksterAbilityFactory.ActivateAbility(AbilityThree);
         }
     }
 }

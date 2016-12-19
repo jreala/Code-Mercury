@@ -5,7 +5,7 @@
         Brawler,
         Attacker,
         Defender,
-        Speedster,
+        Trickster,
         Manipulator,
         Conjurer,
         Enhancer,

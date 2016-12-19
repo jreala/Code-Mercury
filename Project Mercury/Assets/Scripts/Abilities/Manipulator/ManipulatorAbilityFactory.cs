@@ -4,6 +4,10 @@
     {
         private static ManipulatorAbilities useAbility;
         
+        /// <summary>
+        /// Activate Manipulator ability
+        /// </summary>
+        /// <param name="ability"></param>
         public static void ActivateAbility(ManipulatorAbilityList ability)
         {
             if(useAbility == null)
